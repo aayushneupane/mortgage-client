@@ -122,7 +122,7 @@ export default {
       this.uploadAccount();
     },
     async uploadAccount() {
-      const url = "http://localhost:8080/api/account";
+      const url = "http://localhost:8081/api/account";
       let data = {
         balance: this.balance,
         credit: this.credit,
