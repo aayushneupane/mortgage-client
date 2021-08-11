@@ -122,7 +122,7 @@ export default {
       this.uploadAccount();
     },
     async uploadAccount() {
-      const url = "http://localhost:8081/api/account";
+      const url = process.env.VUE_APP_API_URL;
       let data = {
         balance: this.balance,
         credit: this.credit,

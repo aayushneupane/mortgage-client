@@ -26,7 +26,7 @@ export const store = createStore({
   },
   actions: {
     async GET_ACCOUNTS({ commit, state }) {
-      const url = "http://localhost:8081/api/account";
+      const url = process.env.VUE_APP_API_URL;
       await fetch(url, {
         method: "GET",
         headers: { "Content-type": "application/json; charset=UTF-8" },
