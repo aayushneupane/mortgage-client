@@ -1,8 +1,17 @@
 <template>
   <header class="flex">
-    <div class="branding flex">
-      <img src="../assets/f-snsuxx-house-solid.png" />
-    </div>
+    <router-link class="nav-link flex" :to="{ name: 'Home' }"
+      ><div class="branding flex home">
+        <img src="../assets/f-snsuxx-house-solid.png" /></div
+    ></router-link>
+    <router-link
+      class="account flex"
+      :to="{ name: 'Analytics Detail', params: { id: '3234' } }"
+    >
+      <div class="branding flex analytics">
+        <img src="../assets/analytics.png" />
+      </div>
+    </router-link>
   </header>
 </template>
 
@@ -31,6 +40,9 @@ header {
     @media (min-width: 900px) {
       width: 100%;
     }
+  }
+  .analytics {
+    margin-top: 1px;
   }
 
   img {

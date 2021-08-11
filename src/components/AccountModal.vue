@@ -116,7 +116,7 @@ export default {
     closeAccount() {
       this.TOGGLE_ACCOUNT();
     },
-    publishAccoutn() {},
+    publishAccount() {},
     saveDraft() {},
     submitForm() {
       this.uploadAccount();
@@ -147,6 +147,7 @@ export default {
         .then((json) => {
           this.loading = false;
           console.log(json);
+          this.closeAccount();
         })
         .catch((err) => console.log("ERR!", err));
     },
